@@ -29,6 +29,10 @@
 
 
 using namespace std;
+
+// Functions
+vector<string> StrSplit(string work, char delim, int rep);
+
 vector<string> StrSplit(string work, char delim, int rep = 0) {
     // rep == 1: Also insert empty strings
     vector<string> flds;
@@ -53,6 +57,40 @@ vector<string> StrSplit(string work, char delim, int rep = 0) {
     return flds;
 }
 
+class Point {
+public:
+    typedef int pos_type;
+    pos_type x,y;
+    bool operator < (const Point& other) const {
+        if (x != other.x) return x < other.x;
+        return y < other.y;
+    }
+    bool operator == (const Point& other) const {
+        return x == other.x && y == other.y;
+    }
+    void print() {
+        // for debug
+        cout << "(" << x << "," << y << ")";
+    }
+};
+
+#define MP make_pair
+#define debug true
+#define UNM unordered_map
+#define UNS unordered_set
+
+typedef vector<int> VI;
+typedef vector<VI> Mat;
+typedef pair<int,int> PI;
+
+class Solution {
+public:
+    void solve() {}
+};
+
+
 int main() {
+    Solution sol;
+    sol.solve();
     return 0;
 }
