@@ -33,6 +33,9 @@ using namespace std;
 // Functions
 vector<string> StrSplit(string work, char delim, int rep);
 
+template <typename T, typename Display> 
+void print_vector(const vector<T>& vec, Display disp);
+
 vector<string> StrSplit(string work, char delim, int rep = 0) {
     // rep == 1: Also insert empty strings
     vector<string> flds;
@@ -57,10 +60,19 @@ vector<string> StrSplit(string work, char delim, int rep = 0) {
     return flds;
 }
 
+template <typename T, typename Display> 
+void print_vector(const vector<T>& vec, Display disp) {
+    for (const auto& val:vec) {
+        disp(val);
+    }
+}
+
 class Point {
 public:
     typedef int pos_type;
     pos_type x,y;
+    explicit Point(pos_type x_in, pos_type y_in):x(x_in), y(y_in) {}
+    explicit Point():x(), y() {}
     bool operator < (const Point& other) const {
         if (x != other.x) return x < other.x;
         return y < other.y;
@@ -75,7 +87,7 @@ public:
 };
 
 #define MP make_pair
-#define debug true
+#define debug false
 #define UNM unordered_map
 #define UNS unordered_set
 
