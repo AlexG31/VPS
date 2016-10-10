@@ -91,6 +91,8 @@ public:
 #define debug false
 #define UNM unordered_map
 #define UNS unordered_set
+#define FOR(i, a, b) for(int i = a; i < b; ++i)
+#define FOR_REV(i, a, b) for(int i = a; i >= b; --i)
 
 typedef vector<int> VI;
 typedef vector<VI> Mat;
