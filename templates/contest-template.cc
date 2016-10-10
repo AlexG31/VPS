@@ -20,6 +20,7 @@
 #include "tuple"
 #include "memory"
 #include "limits"
+#include "climits"
 #include "stack"
 #include "forward_list"
 #include "iterator"
