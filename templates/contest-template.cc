@@ -17,6 +17,7 @@
 #include "deque"
 #include "functional"
 #include "ctime"
+#include "cctype"
 #include "tuple"
 #include "memory"
 #include "limits"
